@@ -17,4 +17,6 @@ public interface IUserAdminService {
     String updateActiveUsersStatus(String newStatus);
 
     ResponseEntity<List<User>> getAll();
+
+    Integer countUsers(String role);
 }

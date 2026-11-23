@@ -79,4 +79,8 @@ public class UserAdminService implements IUserAdminService {
            throw new RuntimeException("No list of users found");
        }
     }
+
+    public Integer countUsers(String role) {
+        return userRepository.countUsersByRole(role);
+    }
 }

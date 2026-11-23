@@ -48,4 +48,9 @@ public class UserAdminController {
         String message = userAdminService.updateActiveUsersStatus(status);
         return ResponseEntity.ok().body(message);
     }
+
+    @GetMapping("/count")
+    public Integer countUsers(@RequestParam String role) {
+        return userAdminService.countUsers(role);
+    }
 }
